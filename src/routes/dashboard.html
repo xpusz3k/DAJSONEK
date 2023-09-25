@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <nav>
+        <div class="left">
+            <h1>Dajsonek</h1>
+        </div>
+        <div class="right">
+            <li><a href="#" onclick="toSite('')">Strona główna</a></li>
+            <li><a href="#" onclick="toSite('shop')">Sklep</a></li>
+            <li><a href="#" onclick="toSite('about')">O mnie</a></li>
+            <li><a href="#" onclick="toSite('contact')">Kontakt</a></li>
+            <button id="logBtn" onclick="toSite('login')">ZALOGUJ</button>
+        </div>
+        <button class="menu"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <section class="dashboard" id="dashboard">
+        <div class="top">
+            <div class="left">
+                <h2>Panel Administratora</h2>
+                <p>Zarządzaj stroną, odczytuj maile i wyświetlaj statystyki</p>
+            </div>
+            <div class="right" id="panel">
+                <button onclick="panel('stats')" class="active"><i class="fas fa-chart-column"></i></button>
+                <button onclick="panel('edit')"><i class="fas fa-pencil-alt"></i></button>
+                <button onclick="panel('mails')"><i class="fas fa-message"></i></button>
+            </div>
+        </div>
+        <div class="d_stats">
+            <div class="d_stat">
+                <h3 id="created_accounts">0</h3>
+                <p>Stworzonych kont</p>
+            </div>
+            <div class="d_stat">
+                <h3 id="sended_mails">0</h3>
+                <p>Wysłanych maili</p>
+            </div>
+            <div class="d_stat">
+                <h3 id="created_items">0</h3>
+                <p>Przedmiotów w sklepie</p>
+            </div>
+            <div class="d_stat">
+                <h3 id="created_articles">0</h3>
+                <p>Stworzonych artykułów</p>
+            </div>
+        </div>
+
+        <div class="d_mails">
+        </div>
+        <div class="d_edits">
+            <div class="d_edit_buttons">
+                <button onclick="createPopup('Aby zmienić tekst w sekcji, wejdź na jakąkolwiek z sekcji i naciśnij na tekst, który chcesz edytować a następnie wpisz w jego miejscu nowy tekst')">Edytuj sekcje <i class="fas fa-pencil-alt"></i></button>
+                <button onclick="showShopPopup()">Zarządzaj sklepem <i class="fas fa-dollar"></i></button>
+                <button onclick="showArticlePopup()">Zarządzaj artukułami <i class="fas fa-paperclip"></i></button>
+            </div>
+            <div id="flex-row">
+                <div class="d_edit_articles_add_popup">
+                    <h4>Stwórz nowy artykuł</h4>
+                    <div class="info">
+                        <input id="article_name" type="text" placeholder="Tytuł artykułu" maxlength="25" autocomplete="off">
+                        <input id="article_text" type="text" placeholder="Zawartość artykułu" autocomplete="off">
+                        <input id="article_image" type="text" placeholder="URL zdjęcia" autocomplete="off">
+                        <button onclick="addArticle()">Potwierdź <i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+                <div class="d_edit_articles_del_popup">
+                    <h4>Usuń artykuł</h4>
+                    <div class="info">
+                        <input id="article_id" type="text" placeholder="ID artykułu" maxlength="25" autocomplete="off">
+                        <button onclick="delArticle()">Potwierdź <i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="flex-row">
+                <div class="d_edit_shop_add_popup">
+                    <h4>Dodaj przedmiot do sklepu</h4>
+                    <div class="info">
+                        <input id="item_name" type="text" placeholder="Nazwa przedmiotu" maxlength="25" autocomplete="off">
+                        <input id="item_cost" type="text" placeholder="Cena przedmiotu" maxlength="6" autocomplete="off">
+                        <input id="item_url" type="text" placeholder="URL płatności" autocomplete="off">
+                        <button onclick="addItem()">Potwierdź <i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+                <div class="d_edit_shop_del_popup">
+                    <h4>Usuń przedmiot z sklepu</h4>
+                    <div class="info">
+                        <input id="item_del_name" type="text" placeholder="Nazwa przedmiotu" maxlength="25">
+                        <button onclick="delItem()">Potwierdź <i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dajsonek</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="shortcut icon" href="/src/assets/images/icon.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBZQQg_h2blLP3hC8KReGxQNP6bPO6lSS0",
+        authDomain: "dajsonek-36bf7.firebaseapp.com",
+        databaseURL: "https://dajsonek-36bf7-default-rtdb.firebaseio.com",
+        projectId: "dajsonek-36bf7",
+        storageBucket: "dajsonek-36bf7.appspot.com",
+        messagingSenderId: "391663148640",
+        appId: "1:391663148640:web:3682c55dffaa1f13a8ed05",
+      };
+      // Inicjuj Firebase SDK
+      firebase.initializeApp(firebaseConfig);
+
+      // Uzyskaj dostęp do bazy danych Firebase
+      const database = firebase.database();
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <h1>Dajsonek</h1>
+      </div>
+      <div class="right">
+        <li class="active">
+          <a href="#" onclick="toSite('')">Strona główna</a>
+        </li>
+        <li><a href="#" onclick="toSite('shop')">Sklep</a></li>
+        <li><a href="#" onclick="toSite('about')">O mnie</a></li>
+        <li><a href="#" onclick="toSite('contact')">Kontakt</a></li>
+        <button id="logBtn" onclick="toSite('login')">ZALOGUJ</button>
+      </div>
+      <button class="menu"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <section class="home" id="home">
+      <img src="/src/assets/images/deco.png" alt="" />
+      <div class="heading">
+        <h2>Witajcie na mojej stronie</h2>
+        <p>
+          Ja jestem Dawid "dajsonek" Majer. Na tej stronie będziecie mogli mnie
+          wesprzeć ale nie tylko
+        </p>
+      </div>
+      <div class="buttons">
+        <button onclick="toSite('shop')">
+          ZAJRZYJ DO SKLEPU <i class="fas fa-shop"></i>
+        </button>
+<article>
+       <div id="ads">
+
+       </div> 
+      </article>
+        </article>
+        <button onclick="toSite('contact')">
+          SKONTAKTUJ SIĘ <i class="fas fa-phone"></i>
+        </button>
+      </div>
+    </section>
+
+  <article>
+    <div id="ads">
+
+    </div> 
+   </article>
+
+    <footer>
+      <h3 class="footer_title">Dajsonek</h3>
+      <div class="footer_links">
+        <a href="#">Strona główna</a>
+        <a href="#">Sklep</a>
+        <a href="#">O mnie</a>
+        <a href="#">Kontakt</a>
+      </div>
+      <p>&#169; 2023 copyright <span>CodeAdiksuu</span>.</p>
+    </footer>
+
+    <script src="./dist/app.js"></script>
+  </body>
+</html>

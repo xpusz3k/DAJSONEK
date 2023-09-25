@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <nav>
+        <div class="left">
+            <h1>Dajsonek</h1>
+        </div>
+        <div class="right">
+            <li><a href="#" onclick="toSite('')">Strona główna</a></li>
+            <li><a href="#" onclick="toSite('shop')">Sklep</a></li>
+            <li><a href="#" onclick="toSite('about')">O mnie</a></li>
+            <li class="active"><a href="#" onclick="toSite('contact')">Kontakt</a></li>
+            <button id="logBtn" onclick="toSite('login')">ZALOGUJ</button>
+        </div>
+        <button class="menu"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <section class="contact" id="contact">
+        <img src="/src/assets/images/deco.png" alt="">
+        <div class="heading">
+            <h2>Masz jakieś pytanie?</h2>
+            <p>Chcesz mnie o coś spytać? Wypełnij poniższy formularz i wyślij wiadomość email! <span>wymagana rejestracja konta</span></p>
+        </div>
+        <div class="contact_box">
+            <div class="left">
+                <img src="../../src/assets/images/mail.png" alt="">
+            </div>
+            <div class="right">
+                <div class="texts">
+                    <p>Jeśli masz problemy z wysłaniem wiadomości, upewnij się że jesteś zarejestrowany oraz zweryfikowałeś swoje konto</p>
+                </div>
+                <form id="send_form">
+                    <input id="send_title" type="text" placeholder="Tytuł wiadomości" maxlength="18" autocomplete="off">
+                    <input id="send_message" type="text" placeholder="Twoja wiadomość" maxlength="100" autocomplete="off">
+                    <button type="submit">wyślij wiadomość <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3 class="footer_title">Dajsonek</h3>
+        <div class="footer_links">
+            <a href="#">Strona główna</a>
+            <a href="#">Sklep</a>
+            <a href="#">O mnie</a>
+            <a href="#">Kontakt</a>
+        </div>
+        <p>&#169; 2023 copyright <span>CodeAdiksuu</span>.</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <nav>
+        <div class="left">
+            <h1>Dajsonek</h1>
+        </div>
+        <div class="right">
+            <li><a href="#" onclick="toSite('')">Strona główna</a></li>
+            <li><a href="#" onclick="toSite('shop')">Sklep</a></li>
+            <li><a href="#" onclick="toSite('about')">O mnie</a></li>
+            <li><a href="#" onclick="toSite('contact')">Kontakt</a></li>
+            <button id="logBtn" onclick="toSite('login')">ZALOGUJ</button>
+        </div>
+        <button class="menu"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <section class="user" id="user">
+        <img src="/src/assets/images/deco.png" alt="">
+        <div class="register">
+            <div class="top">
+                <h2>Zaloguj się</h2>
+            </div>
+            <form id="log_form">
+                <input type="text" placeholder="Twój email" id="log_email" autocomplete="off">
+                <input type="password" placeholder="Wpisz hasło" id="log_password" autocomplete="off">
+                <button>Zaloguj</button>
+            </form>
+            <span onclick="toSite('register')">Nie mam jeszcze konta. Zarejestruj</span>
+        </div>
+    </section>
+
+    <footer>
+        <h3 class="footer_title">Dajsonek</h3>
+        <div class="footer_links">
+            <a href="#">Strona główna</a>
+            <a href="#">Sklep</a>
+            <a href="#">O mnie</a>
+            <a href="#">Kontakt</a>
+        </div>
+        <p>&#169; 2023 copyright <span>CodeAdiksuu</span>.</p>
+    </footer>
+    
+</body>
+</html>
