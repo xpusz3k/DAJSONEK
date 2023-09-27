@@ -1,0 +1,57 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  }
+}
+{
+    "nazwa": "mój-projekt-devkontener",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", // Dowolny ogólny obraz oparty na Debianie.
+    "cechy": {
+        „ghcr.io/devcontainers/features/go:1”: {
+            „wersja”: „1.18”
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "wersja": "najnowsza",
+            „moby”: prawda
+        }
+    }
+}
+"ghcr.io/devcontainers-contrib/features/npm-package:1": {
+
+  
+}
+"ghcr.io/devcontainers-contrib/features/live-server:1": {
+  {
+    "nazwa": "mój-projekt-devkontener",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", // Dowolny ogólny obraz oparty na Debianie.
+    "cechy": {
+        „ghcr.io/devcontainers/features/go:1”: {
+            „wersja”: „1.18”
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "wersja": "najnowsza",
+            „moby”: prawda
+        }
+    }
+}
+"ghcr.io/devcontainers-contrib/features/http-server:1": 
+
+{
+    "name": "my-project-devcontainer",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
+    "features": {
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "1.18"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "version": "latest",
+            "moby": true
+        }
+    }
+}
+{
+
+
+
+  
+}
